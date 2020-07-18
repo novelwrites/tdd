@@ -21,7 +21,7 @@ Boolean taxable;
     }
 
     public BigDecimal getItemPrice() {
-        return BigDecimal.valueOf(0);
+        return itemPrice;
     }
 
     public Boolean getImportable() {
