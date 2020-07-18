@@ -25,13 +25,20 @@ Boolean taxable;
     }
 
     public Boolean getImportable() {
-        return true;
+        return importable;
     }
 
     public Boolean getTaxable() {
         return true;
     }
 
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public void setItemPrice(BigDecimal itemPrice) {
+        this.itemPrice = itemPrice;
+    }
 }
 
 
