@@ -1,20 +1,20 @@
 package com.tdd;
 
 import org.junit.jupiter.api.Test;
+
+import java.math.BigDecimal;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestItems {
-    Main main = new Main();
+    Items item = new Items ("Clean Code", BigDecimal.valueOf(32.99), false, false);
     @Test
-    public void test_printHelloWorld() {
-        String expected = "Hello World!";
-        String actual = main.printHelloWorld(); //remember that main is invoking method from main class
-
+    public void test_getName() {
+        String expected = "Clean Code";
+        String actual = item.getItemName();
         assertEquals(expected, actual);
+
     }
-
-
-
 
 
 
