@@ -16,7 +16,13 @@ public class TestItems {
 
     }
 
+    @Test
+    public void test_getItemPrice() {
+        BigDecimal expected = BigDecimal.valueOf(32.99);
+        BigDecimal actual = item.getItemPrice();
+        assertEquals(expected, actual);
 
+    }
 
 
 }

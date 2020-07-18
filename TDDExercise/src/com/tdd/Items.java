@@ -21,24 +21,24 @@ Boolean taxable;
     }
 
     public BigDecimal getItemPrice() {
-        return itemPrice;
+        return BigDecimal.valueOf(0);
     }
 
     public Boolean getImportable() {
-        return importable;
+        return true;
     }
 
     public Boolean getTaxable() {
-        return taxable;
+        return true;
     }
 
-    public void setItemName(String itemName) {
+    /*public void setItemName(String itemName) {
         this.itemName = itemName;
     }
 
     public void setItemPrice(BigDecimal itemPrice) {
         this.itemPrice = itemPrice;
-    }
+    }*/
 
 }
 
