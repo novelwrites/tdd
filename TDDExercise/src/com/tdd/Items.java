@@ -16,10 +16,30 @@ Boolean taxable;
         this.importable = importable;
         this.taxable = taxable;
     }
-public String getItemName () {
+    public String getItemName() {
+        return itemName;
+    }
 
-        return "item name";
+    public BigDecimal getItemPrice() {
+        return itemPrice;
+    }
+
+    public Boolean getImportable() {
+        return importable;
+    }
+
+    public Boolean getTaxable() {
+        return taxable;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public void setItemPrice(BigDecimal itemPrice) {
+        this.itemPrice = itemPrice;
+    }
 
 }
 
-}
+
