@@ -32,14 +32,6 @@ Boolean taxable;
         return true;
     }
 
-    /*public void setItemName(String itemName) {
-        this.itemName = itemName;
-    }
-
-    public void setItemPrice(BigDecimal itemPrice) {
-        this.itemPrice = itemPrice;
-    }*/
-
 }
 
 

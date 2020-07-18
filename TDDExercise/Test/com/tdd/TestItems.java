@@ -23,6 +23,13 @@ public class TestItems {
         assertEquals(expected, actual);
 
     }
+    @Test
+    public void test_getImportable() {
+        Boolean expected = Boolean.FALSE;
+        Boolean actual = item.getImportable();
+        assertEquals(expected, actual);
+
+    }
 
 
 }
