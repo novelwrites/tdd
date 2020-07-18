@@ -29,7 +29,7 @@ Boolean taxable;
     }
 
     public Boolean getTaxable() {
-        return true;
+        return taxable;
     }
 
     public void setItemName(String itemName) {
