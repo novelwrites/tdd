@@ -30,6 +30,11 @@ public class TestItems {
         assertEquals(expected, actual);
 
     }
-
+    @Test
+    public void test_getTaxable() {
+        Boolean expected = Boolean.FALSE;
+        Boolean actual = item.getTaxable();
+        assertEquals(expected, actual);
+    }
 
 }
