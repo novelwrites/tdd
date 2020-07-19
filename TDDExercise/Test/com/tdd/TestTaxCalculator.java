@@ -3,6 +3,7 @@ package com.tdd;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,7 +29,7 @@ public class TestTaxCalculator {
         ShoppingCart taxesCart2 = new ShoppingCart();
         taxesCart2.addItemToCart("Music CD", BigDecimal.valueOf(14.99), false, true);
         calculator.addTaxToItemInCart(taxesCart2.getItemsInCart()); //feeding the ArrayList into the cart so that we can perform the calculations on it
-        BigDecimal expected = BigDecimal.valueOf(14.99 + 1.50);
+        BigDecimal expected = BigDecimal.valueOf(14.99).multiply(BigDecimal.valueOf(1.10)).setScale(2, RoundingMode.HALF_EVEN);
         BigDecimal actual = taxesCart2.getItemsInCart().get(0).getItemPrice();
         assertEquals(expected, actual);
 

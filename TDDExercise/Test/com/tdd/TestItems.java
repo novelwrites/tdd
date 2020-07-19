@@ -26,14 +26,14 @@ public class TestItems {
     @Test
     public void test_getImportable() {
         Boolean expected = Boolean.FALSE;
-        Boolean actual = item.getImportable();
+        Boolean actual = item.isImportable();
         assertEquals(expected, actual);
 
     }
     @Test
     public void test_getTaxable() {
         Boolean expected = Boolean.FALSE;
-        Boolean actual = item.getTaxable();
+        Boolean actual = item.isTaxable();
         assertEquals(expected, actual);
     }
 

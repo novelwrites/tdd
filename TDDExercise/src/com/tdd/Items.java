@@ -24,11 +24,11 @@ Boolean taxable;
         return itemPrice;
     }
 
-    public Boolean getImportable() {
+    public Boolean isImportable() {
         return importable;
     }
 
-    public Boolean getTaxable() {
+    public Boolean isTaxable() {
         return taxable;
     }
 
