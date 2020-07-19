@@ -14,14 +14,19 @@ ShoppingCart taxesCart = new ShoppingCart();
 
 public BigDecimal addTaxToItemInCart (ArrayList<Items> itemsInCart) {
 for(Items item : itemsInCart) { //everything in for loop tests each item one at a time in cart
-    if(!item.isImportable() && item.isTaxable()) { //one specific item (Music CD)
+    if(!item.isImportable() && item.isTaxable()) { //one specific item (taxable)
         item.setItemPrice(item.getItemPrice().multiply(BigDecimal.valueOf(1.10)).setScale(2, RoundingMode.HALF_EVEN));
     }
-    if(item.isImportable() && !item.isTaxable()) { //one specific item (Imported Chocolate)
+    if(item.isImportable() && !item.isTaxable()) { //one specific item (import duty)
         item.setItemPrice(item.getItemPrice().multiply(BigDecimal.valueOf(1.05)).setScale(2, RoundingMode.HALF_EVEN));
     }
-    if(item.isImportable() && item.isTaxable()) { //one specific item (Imported Chocolate)
+    if(item.isImportable() && item.isTaxable()) { //one specific item (taxable and import duty)
         item.setItemPrice(item.getItemPrice().multiply(BigDecimal.valueOf(1.15)).setScale(2, RoundingMode.HALF_EVEN));
+    }
+    //I know I could have just said else below, but this is a learning experience for me and this helps me
+    //understand better what I am doing for each condition :)
+    if(!item.isImportable() && !item.isTaxable()) { //one specific item (no tax and no import duty)
+        item.setItemPrice(item.getItemPrice().multiply(BigDecimal.valueOf(1.00)).setScale(2, RoundingMode.HALF_EVEN));
     }
 
 }
@@ -31,14 +36,4 @@ for(Items item : itemsInCart) { //everything in for loop tests each item one at 
 }
 
 
-//need to create a new Big Decimal variable for the price with taxes added to it -
-//initialize it to null
-
-//for loop (iterate through array for each item) - optional until adding multiple items
-//(similar to cart class)
-
-//then set new Big Decimal variable = item.getPrice multiplied by 1.10 (tax rate)
-
-
-//Setting itemPrice to value of new Big Decimal variable - price gets updated here
 

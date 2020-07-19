@@ -55,11 +55,9 @@ public class TestTaxCalculator {
     }
 
 
-    //write a test: did price get updated? (correlates to line 19 on TaxCalculator.java)
+    //write a test: did price get updated?
 
-    //Will check to see if taxable or not later
-
-
+    //Will check to see if taxable or not later - yes - done!
 
 
 }
