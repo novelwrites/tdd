@@ -33,6 +33,12 @@ public class TestTaxCalculator {
         BigDecimal actual = taxesCart2.getItemsInCart().get(0).getItemPrice();
         assertEquals(expected, actual);
 
+        taxesCart2.addItemToCart("Swiss chocolate", BigDecimal.valueOf(10.00), true, false);
+        calculator.addTaxToItemInCart(taxesCart2.getItemsInCart()); //feeding the ArrayList into the cart so that we can perform the calculations on it
+        BigDecimal expected2 = BigDecimal.valueOf(10.00).multiply(BigDecimal.valueOf(1.05)).setScale(2, RoundingMode.HALF_EVEN);
+        BigDecimal actual2 = taxesCart2.getItemsInCart().get(1).getItemPrice(); //knows which part of array its in
+        assertEquals(expected2, actual2);
+
 
     }
 
