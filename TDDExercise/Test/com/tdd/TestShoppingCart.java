@@ -16,7 +16,7 @@ public class TestShoppingCart {
     public void test_isItemAdded() {
         cart.addItemToCart("Clean Code", BigDecimal.valueOf(32.99), false, false);
         String expected = "Clean Code";
-        String actual = cart.findInCart();
+        String actual = cart.findInCart("Clean Code");
         assertEquals(expected, actual);
 
     }
