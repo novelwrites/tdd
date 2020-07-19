@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class TaxCalculator {
 
-    BigDecimal itemTax = null;
 
     //create a new instance of ShoppingCart so I can pull things from it
 
@@ -12,9 +11,10 @@ ShoppingCart taxesCart = new ShoppingCart();
 
 //need an add taxes method (dummy) needs to return a Dummy Big Decimal
 
-public void addTaxToItemInCart () {
+public BigDecimal addTaxToItemInCart (ArrayList<Items> itemsInCart) {
 
-    return; //needs to return Big Decimal
+
+    return BigDecimal.valueOf(0.0); //looking at price of item
 }
 }
 

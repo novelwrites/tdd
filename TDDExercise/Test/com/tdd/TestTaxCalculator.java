@@ -14,10 +14,12 @@ public class TestTaxCalculator {
 
     @Test
     public void test_isTaxAdded() {
-        calculator.addTaxToItemInCart();
-        BigDecimal expected = BigDecimal.valueOf(0);
-        BigDecimal actual =  calculator.itemTax;
-        assertEquals(expected, actual );
+        ShoppingCart taxesCart = new ShoppingCart();
+        taxesCart.addItemToCart("Clean Code", BigDecimal.valueOf(32.99), false, false);
+        calculator.addTaxToItemInCart(taxesCart.getItemsInCart()); //feeding the ArrayList into the cart so that we can perform the calculations on it
+        BigDecimal expected = BigDecimal.valueOf(32.99);
+        BigDecimal actual =  calculator.addTaxToItemInCart(taxesCart.getItemsInCart());
+        assertEquals(expected, actual);
 
     }
 
