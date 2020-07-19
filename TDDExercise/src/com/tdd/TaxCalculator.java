@@ -1,10 +1,22 @@
 package com.tdd;
+import java.math.BigDecimal;
+import java.util.ArrayList;
 
 public class TaxCalculator {
-}
-  //create a new instance of Cart so I can pull things from it
+
+    BigDecimal itemTax = null;
+
+    //create a new instance of ShoppingCart so I can pull things from it
+
+ShoppingCart taxesCart = new ShoppingCart();
 
 //need an add taxes method (dummy) needs to return a Dummy Big Decimal
+
+public void addTaxToItemInCart () {
+
+    return; //needs to return Big Decimal
+}
+}
 
 
 //need to create a new Big Decimal variable for the price with taxes added to it -
@@ -17,3 +29,4 @@ public class TaxCalculator {
 
 
 //Setting itemPrice to value of new Big Decimal variable - price gets updated here
+
