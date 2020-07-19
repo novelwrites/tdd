@@ -32,9 +32,9 @@ public String findInCart(String itemName) {
 //bring the items from Items into the arraylist.
 
 
-
-
-
+    public ArrayList<Items> getItemsInCart() {
+        return itemsInCart;
+    }
 }
 
     //add them one at a time
