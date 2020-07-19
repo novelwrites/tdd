@@ -23,7 +23,17 @@ public class TestTaxCalculator {
 
     }
 
+    @Test
+    public void test_areTaxesAndImportsBeingAdded() {
+        ShoppingCart taxesCart2 = new ShoppingCart();
+        taxesCart2.addItemToCart("Music CD", BigDecimal.valueOf(14.99), false, true);
+        calculator.addTaxToItemInCart(taxesCart2.getItemsInCart()); //feeding the ArrayList into the cart so that we can perform the calculations on it
+        BigDecimal expected = BigDecimal.valueOf(14.99 + 1.50);
+        BigDecimal actual = taxesCart2.getItemsInCart().get(0).getItemPrice();
+        assertEquals(expected, actual);
 
+
+    }
 
 
     //write a test: did price get updated? (correlates to line 19 on TaxCalculator.java)
