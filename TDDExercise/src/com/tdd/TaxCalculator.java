@@ -14,8 +14,11 @@ ShoppingCart taxesCart = new ShoppingCart();
 
 public BigDecimal addTaxToItemInCart (ArrayList<Items> itemsInCart) {
 for(Items item : itemsInCart) { //everything in for loop tests each item one at a time in cart
-    if(!item.isImportable() && item.isTaxable()) { //one specific item
+    if(!item.isImportable() && item.isTaxable()) { //one specific item (Music CD)
         item.setItemPrice(item.getItemPrice().multiply(BigDecimal.valueOf(1.10)).setScale(2, RoundingMode.HALF_EVEN));
+    }
+    if(item.isImportable() && !item.isTaxable()) { //one specific item (Imported Chocolate)
+        item.setItemPrice(item.getItemPrice().multiply(BigDecimal.valueOf(1.05)).setScale(2, RoundingMode.HALF_EVEN));
     }
 }
 
