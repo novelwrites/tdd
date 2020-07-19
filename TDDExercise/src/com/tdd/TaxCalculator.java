@@ -20,6 +20,9 @@ for(Items item : itemsInCart) { //everything in for loop tests each item one at 
     if(item.isImportable() && !item.isTaxable()) { //one specific item (Imported Chocolate)
         item.setItemPrice(item.getItemPrice().multiply(BigDecimal.valueOf(1.05)).setScale(2, RoundingMode.HALF_EVEN));
     }
+    if(item.isImportable() && item.isTaxable()) { //one specific item (Imported Chocolate)
+        item.setItemPrice(item.getItemPrice().multiply(BigDecimal.valueOf(1.15)).setScale(2, RoundingMode.HALF_EVEN));
+    }
 
 }
 
