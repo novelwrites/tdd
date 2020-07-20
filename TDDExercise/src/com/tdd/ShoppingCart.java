@@ -36,6 +36,8 @@ public void clearShoppingCart() {
 
     public ArrayList<Items> getItemsInCart() {
 
+        return itemsInCart;
+
     }
 }
 

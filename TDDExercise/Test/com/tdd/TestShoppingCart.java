@@ -21,9 +21,9 @@ public class TestShoppingCart {
 
     @Test
     public void test_isShoppingCartEmpty() {
-        cart.clearShoppingCart();
         cart.addItemToCart("Clean Code", BigDecimal.valueOf(32.99), false, false);
-        int expected = 1;
+        cart.clearShoppingCart();
+        int expected = 0;
         int actual = cart.getItemsInCart().size();
         assertEquals(expected, actual);
 
