@@ -39,6 +39,14 @@ for(Items item : itemsInCart) { //everything in for loop tests each item one at 
 
     return totalTax; //looking at price of item
 }
+
+public BigDecimal getGrandTotal (ArrayList<Items> items) {
+
+
+    return BigDecimal.valueOf(0);
+}
+
+
 }
 
 

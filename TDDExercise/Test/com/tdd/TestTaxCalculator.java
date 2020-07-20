@@ -65,13 +65,24 @@ public class TestTaxCalculator {
             assertEquals(expected, actual);
 
      }
-        
-    }
+     @Test
+    public void test_isGrandTotalCorrect() {
+         taxesCart.clearShoppingCart();
+         taxesCart.addItemToCart("Music CD", BigDecimal.valueOf(14.99), false, true);
+         taxesCart.addItemToCart("Swiss chocolate", BigDecimal.valueOf(10.00), true, false);
+         taxesCart.addItemToCart("White Shoulders perfume", BigDecimal.valueOf(47.50), true, true);
+         taxesCart.addItemToCart("A Tale of Two Cities", BigDecimal.valueOf(12.99), false, false);
+         BigDecimal expected = BigDecimal.valueOf(85.48);
+         BigDecimal actual = calculator.getGrandTotal(taxesCart.getItemsInCart());
+         assertEquals(expected, actual);
+
+     }
 
 
-    //write a test: did price get updated?
+}
 
-    //Will check to see if taxable or not later - yes - done!
+
+
 
 
 
