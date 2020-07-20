@@ -2,6 +2,8 @@
 package com.tdd;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collection;
+
 public class ShoppingCart {
 
 //take in all of the products into an array -
@@ -26,25 +28,14 @@ public String findInCart(String itemName) {
 
         return "item not found";
 
-
 }
 
-//bring the items from Items into the arraylist.
-
+public void clearShoppingCart() {
+        this.itemsInCart.clear();
+}
 
     public ArrayList<Items> getItemsInCart() {
-        return itemsInCart;
+
     }
 }
-
-    //add them one at a time
-
-    //takes in all the same variables as items (all four)
-
-    //add item to ShoppingCart
-
-
-   // Have to write test but not returning anything -
-
-
 
