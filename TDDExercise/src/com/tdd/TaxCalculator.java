@@ -41,9 +41,12 @@ for(Items item : itemsInCart) { //everything in for loop tests each item one at 
 }
 
 public BigDecimal getGrandTotal (ArrayList<Items> items) {
+    BigDecimal result = BigDecimal.valueOf(0);
+    //Map the items get the item price of each item and the reduce gets the sum of all of the itemPrices (Grand Total)
+    result = items.stream().map(Items::getItemPrice).reduce(BigDecimal.ZERO,BigDecimal::add);
 
+    return result;
 
-    return BigDecimal.valueOf(0);
 }
 
 
