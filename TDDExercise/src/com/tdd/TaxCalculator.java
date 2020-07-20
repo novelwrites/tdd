@@ -8,8 +8,6 @@ public class TaxCalculator {
 
     //create a new instance of ShoppingCart so I can pull things from it
 
-ShoppingCart taxesCart = new ShoppingCart();
-
 //need an add taxes method (dummy) needs to return a Dummy Big Decimal
 
 public BigDecimal addTaxToItemInCart (ArrayList<Items> itemsInCart) {

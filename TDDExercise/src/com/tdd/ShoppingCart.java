@@ -9,7 +9,8 @@ public class ShoppingCart {
 //take in all of the products into an array -
 
 private ArrayList<Items> itemsInCart = new ArrayList<>();
-
+TaxCalculator taxcalculator = new TaxCalculator();
+Receipt receipt = new Receipt();
 
 //Method adds item to cart by creating an instance of the item and setting our variables.
     public void addItemToCart (String itemName, BigDecimal itemPrice, Boolean importable, Boolean taxable) {
@@ -38,6 +39,13 @@ public void clearShoppingCart() {
 
         return itemsInCart;
 
+    }
+
+    public void buyItemsInShoppingCart() {
+        BigDecimal totalTax = taxcalculator.addTaxToItemInCart(itemsInCart);
+        BigDecimal grandTotal = taxcalculator.getGrandTotal(itemsInCart);
+        receipt.printOutTransaction(itemsInCart, totalTax, grandTotal);
+        clearShoppingCart();
     }
 }
 
